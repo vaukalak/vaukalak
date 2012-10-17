@@ -6,21 +6,21 @@
  * To change this template use File | Settings | File Templates.
  */
 package by.vaukalak.core.calls.responder {
-public class Responder implements IResponder{
+public class Responder implements IResponder {
     private var _result:Function;
-    private var _status:Function;
+    private var _fault:Function;
 
-    public function Responder(result:Function, status:Function = null) {
+    public function Responder(result:Function, fault:Function = null) {
         _result = result;
-        _status = status;
+        _fault = fault;
     }
 
-    public function get result():Function {
+    public function get success():Function {
         return _result;
     }
 
-    public function get status():Function {
-        return _status;
+    public function get fault():Function {
+        return _fault;
     }
 }
 }
