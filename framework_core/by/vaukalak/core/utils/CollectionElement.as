@@ -16,7 +16,7 @@ public class CollectionElement {
         _indexes = indexes;
     }
 
-    public function get isValidCell():Boolean {
+    public function get hasValidIndex():Boolean {
         try {
             value;
             return true;

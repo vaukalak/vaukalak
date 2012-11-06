@@ -7,7 +7,8 @@
  */
 package by.vaukalak.core.calls.responder {
 public interface IResponder {
-    function get result():Function;
-    function get status():Function;
+    function get success():Function;
+
+    function get fault():Function;
 }
 }

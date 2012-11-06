@@ -1,15 +1,16 @@
 package by.vaukalak.core.process {
-	import flash.events.IEventDispatcher;
-	
-	/**
-	 * ...
-	 * @author Boutylin Mikhail
-	 */
-	
-	public interface IProgressable extends IEventDispatcher{
-		[Event(name = "progress", "by.vaukalak.events.ProgressEvent")];
-		
-		function get progress():Number;
-	}
-	
+import flash.events.IEventDispatcher;
+
+/**
+ * ...
+ * @author Boutylin Mikhail
+ */
+[Event(name="progress", "by.vaukalak.events.ProgressEvent")]
+
+public interface IProgressable extends IEventDispatcher {
+
+
+    function get progress():Number;
+}
+
 }
