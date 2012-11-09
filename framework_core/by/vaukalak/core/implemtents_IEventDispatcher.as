@@ -1,9 +1,11 @@
 import flash.events.Event;
 import flash.events.EventDispatcher;
+import flash.events.IEventDispatcher;
 
 //import flash.events.IEventDispatcher;
 
 private var p_dispatcher:IEventDispatcher;
+
 private function get _dispatcher():IEventDispatcher {
     return p_dispatcher ||= new EventDispatcher(this);
 }
