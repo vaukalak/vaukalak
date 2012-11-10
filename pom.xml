@@ -15,7 +15,7 @@
     </properties>
 
     <build>
-        <sourceDirectory>framework_core</sourceDirectory>
+        <sourceDirectory>src</sourceDirectory>
 
         <plugins>
             <plugin>
@@ -23,6 +23,14 @@
                 <artifactId>flexmojos-maven-plugin</artifactId>
                 <version>${flexmojos.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <namespaces>
+                        <namespace>
+                            <uri>http://www.vaukalak.by/</uri>
+                            <manifest>src/main/resources/gui-manifest.xml</manifest>
+                        </namespace>
+                    </namespaces>
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>com.adobe.flex</groupId>

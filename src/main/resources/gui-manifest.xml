@@ -1,0 +1,5 @@
+<componentPackage>
+
+    <component id="NativeView" class="by.vaukalak.core.display.base.NativeView"/>
+
+</componentPackage>
