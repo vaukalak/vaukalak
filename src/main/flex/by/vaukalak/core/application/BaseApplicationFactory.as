@@ -18,7 +18,7 @@ package by.vaukalak.core.application {
 	
 	
 	[Event(name="process_progress", type="by.vaukalak.core.events.ProcessProgressEvent")]
-	public class BaseApplicationFactory extends MovieClip implements IProgressable{
+	public class BaseApplicationFactory extends MovieClip{
 		
 		private var _baseClassName:String;
 		
