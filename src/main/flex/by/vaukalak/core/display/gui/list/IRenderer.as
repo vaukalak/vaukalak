@@ -5,7 +5,7 @@
  * Time: 22.40
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.display.list {
+package by.vaukalak.core.display.gui.list {
 public interface IRenderer {
     function set data(value:Object):void;
 

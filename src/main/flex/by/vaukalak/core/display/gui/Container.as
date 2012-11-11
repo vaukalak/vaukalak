@@ -5,7 +5,7 @@
  * Time: 12.27
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.gui {
+package by.vaukalak.core.display.gui {
 import by.vaukalak.core.display.base.NativeView;
 
 import flash.display.Graphics;

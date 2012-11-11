@@ -3,7 +3,7 @@
  * Date: 17.10.12
  * Time: 0.13
  */
-package by.vaukalak.core.display.list {
+package by.vaukalak.core.display.gui.list {
 import by.vaukalak.core.data.Data;
 
 import flash.display.DisplayObject;

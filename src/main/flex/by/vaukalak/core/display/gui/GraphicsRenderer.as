@@ -5,7 +5,7 @@
  * Time: 12.41
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.gui {
+package by.vaukalak.core.display.gui {
 import flash.display.Graphics;
 import flash.utils.Proxy;
 import flash.utils.flash_proxy;

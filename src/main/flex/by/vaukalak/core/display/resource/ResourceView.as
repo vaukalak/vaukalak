@@ -5,41 +5,51 @@
  * Time: 1.01
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.resource {
+package by.vaukalak.core.display.resource {
+import by.vaukalak.core.resource.*;
+
+import avmplus.factoryXml;
+
 import by.vaukalak.core.calls.Caller;
 import by.vaukalak.core.calls.responder.IResponder;
-import by.vaukalak.core.calls.responder.MacroResponder;
 import by.vaukalak.core.calls.responder.Responder;
-import by.vaukalak.core.display.base.DrawingShape;
 import by.vaukalak.core.display.base.NativeView;
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.BlendMode;
-
 import flash.display.DisplayObject;
-import flash.display.Shape;
-import flash.display.Sprite;
+import flash.display.DisplayObjectContainer;
 import flash.events.Event;
-import flash.events.MouseEvent;
 import flash.geom.Matrix;
 
 [Event(name="resourceChange", type="flash.events.Event")]
 
-public class ResourceView extends NativeView {
+public class ResourceView extends NativeView implements IResourceAware{
 
     private var _verticalAlign:String;
     private var _resource:DisplayObject;
     private var _matrix:Matrix;
-
+    private var _uri:String;
     public function ResourceView(uri:String = "") {
         if (uri) this.uri = uri;
+        addEventListener(Event.ADDED_TO_STAGE, _createResource, false, 0, true);
+        addEventListener(Event.REMOVED_FROM_STAGE, _clearCache, false, 0, true);
+    }
+
+    private function _clearCache(event:Event):void {
+        p_resourceManager = null;
     }
 
 
     public function set uri(s:String):void {
         _clearResource();
-        var parts:Array = s.split("?");
+        _uri = s;
+        _createResource();
+    }
+
+    private function _createResource(event:Event = null):void {
+        if(!(_uri && resourceManager)){
+            return;
+        }
+        var parts:Array = _uri.split("?");
         var matrix:Matrix = new Matrix();
         if (parts.length > 1) {
             var urnArguments:Array = String(parts[1]).split("&");
@@ -52,7 +62,7 @@ public class ResourceView extends NativeView {
         var caller:Caller = new Caller(_onResourseLoaded, matrix);
         caller.constructorArgumentsFirst = false;
         var responder:IResponder = new Responder(caller.call);
-        ResourseManager.instanse.getResource(s, responder);
+        resourceManager.getResource(_uri, responder);
     }
 
     private function _clearResource():void {
@@ -114,5 +124,22 @@ public class ResourceView extends NativeView {
     public function get resource():DisplayObject {
         return _resource;
     }
+
+    private var p_resourceManager:ResourceManager;
+
+    public function get resourceManager():ResourceManager {
+        if(p_resourceManager){
+            return p_resourceManager;
+        }
+        var nextParent:DisplayObjectContainer = parent;
+        while(nextParent){
+            if(nextParent is IResourceAware){
+                return p_resourceManager = (nextParent as IResourceAware).resourceManager;
+            }
+            nextParent = nextParent.parent;
+        }
+        throw new Error("resource root not found");
+    }
+
 }
 }

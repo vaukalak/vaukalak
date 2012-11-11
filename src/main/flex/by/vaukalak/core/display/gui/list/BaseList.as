@@ -5,7 +5,7 @@
  * Time: 22.24
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.display.list {
+package by.vaukalak.core.display.gui.list {
 import by.vaukalak.core.data.Data;
 import by.vaukalak.core.data.DataContainer;
 import by.vaukalak.core.display.array.DisplayArray;

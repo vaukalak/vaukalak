@@ -1,5 +1,13 @@
 <componentPackage>
-
     <component id="NativeView" class="by.vaukalak.core.display.base.NativeView"/>
-
+    <component id="ViewContainer" class="by.vaukalak.core.display.base.ViewContainer"/>
+    <component id="BaseList" class="by.vaukalak.core.display.gui.list.BaseList"/>
+    <component id="InteractiveList" class="by.vaukalak.core.display.gui.list.InteractiveList"/>
+    <component id="BaseRenderer" class="by.vaukalak.core.display.gui.list.BaseRenderer"/>
+    <component id="Box" class="by.vaukalak.core.display.box.Box"/>
+    <component id="Button" class="by.vaukalak.core.display.gui.Button"/>
+    <component id="Container" class="by.vaukalak.core.display.gui.Container"/>
+    <component id="ResourceView" class="by.vaukalak.core.display.resource.ResourceView"/>
+    <component id="ResourceContainerView" class="by.vaukalak.core.display.resource.ResourceContainerView"/>
+    <component id="DrawingShape" class="by.vaukalak.core.display.base.DrawingShape"/>
 </componentPackage>

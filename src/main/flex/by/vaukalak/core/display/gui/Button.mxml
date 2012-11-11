@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <gui:ButtonBase xmlns:fx="http://ns.adobe.com/mxml/2009"
-                xmlns:gui="by.vaukalak.core.gui.*"
+                xmlns:gui="by.vaukalak.core.display.gui.*"
                 xmlns:flash="flash.text.*" xmlns:base="by.vaukalak.core.display.base.*"
+                xmlns:text="by.vaukalak.core.display.text.*"
                 rollOver="currentSkinURI = overSkinURI"
                 mouseDown="currentSkinURI = downSkinURI"
                 mouseUp="currentSkinURI = overSkinURI"
                 rollOut="currentSkinURI = skinURI"
         >
 
-    <gui:Text visible="{label}" text="{label}" horizontalCenter="0" verticalCenter="0">
-        <gui:textFormat>
+    <text:Text visible="{label}" text="{label}" horizontalCenter="0" verticalCenter="0">
+        <text:textFormat>
             <flash:TextFormat/>
-        </gui:textFormat>
-    </gui:Text>
+        </text:textFormat>
+    </text:Text>
 
 </gui:ButtonBase>

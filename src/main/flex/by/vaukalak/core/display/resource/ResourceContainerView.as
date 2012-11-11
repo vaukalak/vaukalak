@@ -5,7 +5,7 @@
  * Time: 18.46
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.resource {
+package by.vaukalak.core.display.resource {
 import by.vaukalak.core.display.base.NativeView;
 
 public class ResourceContainerView extends NativeView {

@@ -10,19 +10,9 @@ import by.vaukalak.core.calls.responder.IResponder;
 
 import flash.errors.IllegalOperationError;
 
-public class ResourseManager {
+public class ResourceManager {
 
     private const _register:Object = {};
-    private static const _instanse:ResourseManager = new ResourseManager();
-
-    public function ResourseManager() {
-        if (_instanse) throw new IllegalOperationError("only one instanse of ResourseManager can exist")
-    }
-
-    public static function get instanse():ResourseManager {
-        return _instanse;
-    }
-
     public function getResource(uri:*, responder:IResponder):void {
         var qName:QName = uri as QName;
         if (qName) {

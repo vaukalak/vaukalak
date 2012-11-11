@@ -5,7 +5,7 @@
  * Time: 3.07
  * To change this template use File | Settings | File Templates.
  */
-package by.vaukalak.core.display.list {
+package by.vaukalak.core.display.gui.list {
 import by.vaukalak.core.display.base.NativeView;
 
 import flash.events.Event;
