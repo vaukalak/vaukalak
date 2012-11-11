@@ -30,10 +30,10 @@
                             <uri>http://vaukalak.by/</uri>
                             <manifest>src/main/resources/gui-manifest.xml</manifest>
                         </namespace>
-                        <includeNamespaces>
-                            <namespace>http://vaukalak.by/</namespace>
-                        </includeNamespaces>
                     </namespaces>
+                    <includeNamespaces>
+                        <namespace>http://vaukalak.by/</namespace>
+                    </includeNamespaces>
                 </configuration>
                 <dependencies>
                     <dependency>
