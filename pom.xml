@@ -26,7 +26,7 @@
                 <configuration>
                     <namespaces>
                         <namespace>
-                            <uri>http://www.vaukalak.by/</uri>
+                            <uri>http://vaukalak.by/</uri>
                             <manifest>src/main/resources/gui-manifest.xml</manifest>
                         </namespace>
                     </namespaces>
