@@ -28,7 +28,7 @@
                     <namespaces>
                         <namespace>
                             <uri>http://vaukalak.by/</uri>
-                            <manifest>src/main/resources/gui-manifest.xml</manifest>
+                            <manifest>src/main/resources/manifest.xml</manifest>
                         </namespace>
                     </namespaces>
                     <includeNamespaces>
@@ -82,6 +82,7 @@
             <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
             <releases>
                 <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
             </releases>
             <snapshots>
                 <enabled>false</enabled>
@@ -107,6 +108,7 @@
             <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
             <releases>
                 <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
             </releases>
             <snapshots>
                 <enabled>false</enabled>
