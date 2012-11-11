@@ -24,11 +24,15 @@
                 <version>${flexmojos.version}</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <storepass/>
                     <namespaces>
                         <namespace>
                             <uri>http://vaukalak.by/</uri>
                             <manifest>src/main/resources/gui-manifest.xml</manifest>
                         </namespace>
+                        <includeNamespaces>
+                            <namespace>http://vaukalak.by/</namespace>
+                        </includeNamespaces>
                     </namespaces>
                 </configuration>
                 <dependencies>
