@@ -1,4 +1,7 @@
 <componentPackage>
+    <component id="BaseController" class="by.vaukalak.core.controllers.BaseController"/>
+    <component id="AbstractController" class="by.vaukalak.core.controllers.AbstractController"/>
+    <!-- VIEW -->
     <component id="NativeView" class="by.vaukalak.core.display.base.NativeView"/>
     <component id="ViewContainer" class="by.vaukalak.core.display.base.ViewContainer"/>
     <component id="BaseList" class="by.vaukalak.core.display.gui.list.BaseList"/>
