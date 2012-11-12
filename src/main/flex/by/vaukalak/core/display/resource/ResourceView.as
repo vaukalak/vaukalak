@@ -138,7 +138,8 @@ public class ResourceView extends NativeView implements IResourceAware{
             }
             nextParent = nextParent.parent;
         }
-        throw new Error("resource root not found");
+        return null;
+//        throw new ("resource root not found");
     }
 
 }
