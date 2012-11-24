@@ -13,4 +13,6 @@
     <component id="ResourceView" class="by.vaukalak.core.display.resource.ResourceView"/>
     <component id="ResourceContainerView" class="by.vaukalak.core.display.resource.ResourceContainerView"/>
     <component id="DrawingShape" class="by.vaukalak.core.display.base.DrawingShape"/>
+    <component id="Text" class="by.vaukalak.core.display.text.Text"/>
+    <component id="ResourceText" class="by.vaukalak.core.display.text.ResourceText"/>
 </componentPackage>
