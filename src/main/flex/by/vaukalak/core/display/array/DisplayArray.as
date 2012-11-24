@@ -4,6 +4,7 @@ import by.vaukalak.core.display.array.place.ILayout;
 import by.vaukalak.core.display.array.place.VerticalLayout;
 
 import flash.display.DisplayObject;
+import flash.events.Event;
 
 /**
  * ...
@@ -103,6 +104,7 @@ public class DisplayArray extends NativeDisplayArray {
      * The length of the display array
      */
 
+    [Bindable("update")]
     public function get length():uint {
         return _items.length;
     }
@@ -137,7 +139,7 @@ public class DisplayArray extends NativeDisplayArray {
 
     public function update():void {
         _layout.render();
-
+        dispatchEvent(new Event("update"));
     }
 }
 

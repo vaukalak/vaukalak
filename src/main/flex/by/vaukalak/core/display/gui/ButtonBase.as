@@ -11,6 +11,7 @@ import by.vaukalak.core.display.base.NativeView;
 import by.vaukalak.core.display.resource.ResourceView;
 
 import flash.display.DisplayObject;
+import flash.text.TextFormat;
 
 public class ButtonBase extends ResourceView {
 
@@ -22,6 +23,9 @@ public class ButtonBase extends ResourceView {
 
     [Bindable]
     public var label:String;
+
+    [Bindable]
+    public var textFormat:TextFormat;
 
     [Exclude(kind="property", name="uri")]
 

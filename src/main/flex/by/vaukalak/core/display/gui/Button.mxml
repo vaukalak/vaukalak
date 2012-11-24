@@ -9,10 +9,8 @@
                 rollOut="currentSkinURI = skinURI"
         >
 
-    <text:Text visible="{label}" text="{label}" horizontalCenter="0" verticalCenter="0">
-        <text:textFormat>
-            <flash:TextFormat/>
-        </text:textFormat>
-    </text:Text>
+    <text:Text visible="{label}" text="{label}" textFormat="{textFormat}"
+               horizontalCenter="0" verticalCenter="0"
+            />
 
 </gui:ButtonBase>

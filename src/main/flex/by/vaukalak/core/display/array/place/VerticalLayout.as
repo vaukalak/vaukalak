@@ -11,6 +11,12 @@ import flash.errors.IllegalOperationError;
  */
 public class VerticalLayout implements ILayout {
     private var _displayArray:DisplayArray;
+    private var _gap:int;
+
+    public function set gap(value:int):void{
+        _gap = value;
+        render();
+    }
 
     /* INTERFACE by.vaukalak.display.array.place.IPlaceManager */
 
@@ -18,7 +24,7 @@ public class VerticalLayout implements ILayout {
         var lastY:Number = 0;
         for (var i:uint = 0; i < array.length; i++) {
             array.getItemAt(i).y = lastY;
-            lastY += array.getItemAt(i).height + array.objectDistance;
+            lastY += array.getItemAt(i).height + gap;
         }
     }
 
@@ -27,9 +33,14 @@ public class VerticalLayout implements ILayout {
     }
 
     public function render():void {
-        applyTo(_displayArray);
+        if(_displayArray){
+            applyTo(_displayArray);
+        }
     }
 
+    public function get gap():int {
+        return _gap;
+    }
 }
 
 }

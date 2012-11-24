@@ -7,8 +7,6 @@ package by.vaukalak.core.display.base {
 public class DrawingShape extends NativeView {
 
     private var _color:uint;
-    private var _width:uint;
-    private var _height:uint;
 
     public function DrawingShape() {
 

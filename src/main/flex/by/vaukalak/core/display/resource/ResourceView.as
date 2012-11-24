@@ -15,6 +15,10 @@ import by.vaukalak.core.calls.responder.IResponder;
 import by.vaukalak.core.calls.responder.Responder;
 import by.vaukalak.core.display.base.NativeView;
 
+import flash.display.Bitmap;
+
+import flash.display.BitmapData;
+
 import flash.display.DisplayObject;
 import flash.display.DisplayObjectContainer;
 import flash.events.Event;
@@ -28,6 +32,7 @@ public class ResourceView extends NativeView implements IResourceAware{
     private var _resource:DisplayObject;
     private var _matrix:Matrix;
     private var _uri:String;
+
     public function ResourceView(uri:String = "") {
         if (uri) this.uri = uri;
         addEventListener(Event.ADDED_TO_STAGE, _createResource, false, 0, true);
@@ -58,11 +63,17 @@ public class ResourceView extends NativeView implements IResourceAware{
                 matrix[argPair[0]] = argPair[1];
             }
         }
-
         var caller:Caller = new Caller(_onResourseLoaded, matrix);
         caller.constructorArgumentsFirst = false;
         var responder:IResponder = new Responder(caller.call);
         resourceManager.getResource(_uri, responder);
+    }
+
+    private function _resizeImage():void {
+        if(_width && _height && resource){
+            resource.width = _width;
+            resource.height = _height;
+        }
     }
 
     private function _clearResource():void {
@@ -71,10 +82,12 @@ public class ResourceView extends NativeView implements IResourceAware{
         }
     }
 
-    private function _onResourseLoaded(resourse:DisplayObject, matrix:Matrix = null):void {
+    private function _onResourseLoaded(resourse:BitmapData, matrix:Matrix = null):void {
         _clearResource();
-        this._resource = resourse;
-
+        this._resource = new Bitmap(resourse);
+        if(_resource is Bitmap){
+            (_resource as Bitmap).smoothing = true;
+        }
         _matrix = matrix;
         addResource(resource);
         _invalidate();
@@ -126,6 +139,12 @@ public class ResourceView extends NativeView implements IResourceAware{
     }
 
     private var p_resourceManager:ResourceManager;
+
+
+    override public function render():void {
+        _resizeImage();
+        super.render();
+    }
 
     public function get resourceManager():ResourceManager {
         if(p_resourceManager){

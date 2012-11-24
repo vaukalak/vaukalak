@@ -17,11 +17,11 @@ import flash.text.TextFormat;
 public class Text extends NativeView {
 
     private var _textField:TextField;
-    ;
 
     public function Text() {
         addChild(_textField = new TextField());
         _textField.autoSize = TextFieldAutoSize.LEFT;
+        _textField.embedFonts = true;
         super.render();
     }
 
@@ -47,6 +47,7 @@ public class Text extends NativeView {
     public function set textFormat(value:TextFormat):void {
         if (value) {
             _textField.setTextFormat(value);
+            _textField.defaultTextFormat = value;
         } else {
 //            throw new Error("text format can not be null", 2009);
         }
