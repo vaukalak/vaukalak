@@ -19,6 +19,10 @@ public class AbstractController extends BaseEventDispatcher implements IControll
         _baseController = baseController;
     }
 
+    protected function setBaseController(controller:IBaseController):void{
+        _baseController = controller;
+    }
+
     public function get baseController():IBaseController {
         return _baseController;
     }

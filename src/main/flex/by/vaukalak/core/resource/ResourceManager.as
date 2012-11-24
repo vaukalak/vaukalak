@@ -7,10 +7,11 @@
  */
 package by.vaukalak.core.resource {
 import by.vaukalak.core.calls.responder.IResponder;
+import by.vaukalak.core.display.helpers.IManager;
 
 import flash.errors.IllegalOperationError;
 
-public class ResourceManager {
+public class ResourceManager implements IManager{
 
     private const _register:Object = {};
     public function getResource(uri:*, responder:IResponder):void {
@@ -30,6 +31,10 @@ public class ResourceManager {
 
     public function registerProvider(ns:String, target:IResourceProvider):void {
         _register[ns] = target;
+    }
+
+    public function handleCommand(commandName:String, commandInfo:*, responder:IResponder):void {
+        getResource(commandInfo, responder);
     }
 }
 }
