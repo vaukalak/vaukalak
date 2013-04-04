@@ -1,3 +1,4 @@
 .idea/
 target/
 vaukalak-core.iml
+*.DS_Store
