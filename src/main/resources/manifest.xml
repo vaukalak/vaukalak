@@ -15,4 +15,26 @@
     <component id="DrawingShape" class="by.vaukalak.core.display.base.DrawingShape"/>
     <component id="Text" class="by.vaukalak.core.display.text.Text"/>
     <component id="ResourceText" class="by.vaukalak.core.display.text.ResourceText"/>
+    <component id="HitAreaHelper" class="by.vaukalak.core.display.utils.HitAreaHelper"/>
+    <component id="TileLayout" class="by.vaukalak.core.display.array.place.TileLayout"/>
+    <component id="HorrizontalLayout" class="by.vaukalak.core.display.array.place.HorrizontalLayout"/>
+    <component id="VerticalLayout" class="by.vaukalak.core.display.array.place.VerticalLayout"/>
+    <!-- COLLECTIONS -->
+    <component id="SymetricLinker" class="by.vaukalak.core.collections.SymmetricLinker"/>
+    <component id="MultyKeyHash" class="by.vaukalak.core.collections.MultyKeyHash"/>
+    <component id="TwoKeyHash" class="by.vaukalak.core.collections.TwoKeyHash"/>
+    <component id="CollectionElement" class="by.vaukalak.core.utils.CollectionElement"/>
+    <!-- MXML -->
+    <component id="ValueInspector" class="by.vaukalak.core.utils.mxml.ValueInspector"/>
+    <!-- CALLS -->
+    <component id="MacroResponder" class="by.vaukalak.core.calls.responder.MacroResponder"/>
+    <!-- DATA LOADING -->
+    <component id="BaseLoader" class="by.vaukalak.core.net.loading.base.BaseLoader"/>
+    <component id="AssetsLoader" class="by.vaukalak.core.net.loading.assets.AssetsLoader"/>
+    <component id="MultyLoader" class="by.vaukalak.core.net.loading.multy.MultyLoader"/>
+    <component id="HTTPGateway" class="by.vaukalak.core.resource.HTTPGateway"/>
+    <!-- LOGING -->
+    <component id="AbstractOutput" class="by.vaukalak.core.logger.output.common.AbstractOutput"/>
+    <!-- SERIALIZATION -->
+    <component id="PropertyFileParser" class="by.vaukalak.core.utils.PropertyFileParser"/>
 </componentPackage>
