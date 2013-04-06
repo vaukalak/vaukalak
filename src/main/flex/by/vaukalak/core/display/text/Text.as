@@ -21,7 +21,7 @@ public class Text extends NativeView {
     public function Text() {
         addChild(_textField = new TextField());
         _textField.autoSize = TextFieldAutoSize.LEFT;
-        _textField.embedFonts = true;
+//        _textField.embedFonts = true;
         super.render();
     }
 

@@ -19,6 +19,7 @@
     <component id="TileLayout" class="by.vaukalak.core.display.array.place.TileLayout"/>
     <component id="HorrizontalLayout" class="by.vaukalak.core.display.array.place.HorrizontalLayout"/>
     <component id="VerticalLayout" class="by.vaukalak.core.display.array.place.VerticalLayout"/>
+    <component id="Page" class="by.vaukalak.core.display.pages.Page"/>
     <!-- COLLECTIONS -->
     <component id="SymetricLinker" class="by.vaukalak.core.collections.SymmetricLinker"/>
     <component id="MultyKeyHash" class="by.vaukalak.core.collections.MultyKeyHash"/>
